@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         appBar: BaseAppBar(),
         drawer: NDrawer() ,
         //appBar: BaseAppBar(),
-        body: Body(),
+        body:  ListView(children:[Body()]),
       ),
     );
   }
