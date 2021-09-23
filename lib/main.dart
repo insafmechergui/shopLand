@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'appBar.dart';
 import 'body.dart';
+import 'drawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Shopping app',
       home: Scaffold(
         appBar: BaseAppBar(),
-        body:Body(),
+        drawer: NDrawer() ,
+        //appBar: BaseAppBar(),
+        body: Body(),
       ),
     );
   }

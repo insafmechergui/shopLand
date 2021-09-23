@@ -4,12 +4,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      automaticallyImplyLeading: false,
-      elevation: 5.0,
-      leading: Icon(
-        Icons.menu,
-      ),
+      backgroundColor: Colors.deepOrange[100],
       actions: <Widget>[
         Padding(
           padding: EdgeInsets.only(right: 40.0),
@@ -18,7 +13,6 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
             size: 26.0,
           ),
         ),
-
         Padding(
           padding: EdgeInsets.only(right: 40.0),
           child: Icon(
@@ -26,10 +20,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ],
-      iconTheme: IconThemeData(
-          color: Colors.black
-      ),
-
+      iconTheme: IconThemeData(color: Colors.black),
     );
   }
 

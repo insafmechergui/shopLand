@@ -12,7 +12,11 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       margin:EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-      child: Text('Welcome to the store'),
+      child: Container(
+        width: 200.0,
+        height: 200.0,
+        color: Colors.green,
+      ),
     );
   }
 }
