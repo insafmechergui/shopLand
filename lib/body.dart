@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'collection.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -18,48 +19,49 @@ class _BodyState extends State<Body> {
         children: [
           InkWell(
             child: Container(
-              width: 300,
-              height: 300,
+              padding: EdgeInsets.all(15.0),
+              margin: EdgeInsets.all(20.0),
+              width: 160,
+              height: 180,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              transform: Matrix4.rotationZ(0.08),
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.all(20.0),
               child: Image.asset('images/fashion.png', fit: BoxFit.cover),
             ),
             onTap: () {
-              print("Tapped on container");
+              print("Tapped on Men collection");
             },
           ),
           InkWell(
             child: Container(
-              width: 300,
-              height: 300,
+              padding: EdgeInsets.all(15.0),
+              margin: EdgeInsets.all(20.0),
+              width: 160,
+              height: 180,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.all(20.0),
               child: Image.asset('images/women.png', fit: BoxFit.cover),
             ),
             onTap: () {
-              print("Tapped on container2");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Collection()),
+              );
             },
           ),
           InkWell(
             child: Container(
-              width: 300,
-              height: 300,
+              padding: EdgeInsets.all(15.0),
+              margin: EdgeInsets.all(20.0),
+              width: 160,
+              height: 180,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              transform: Matrix4.rotationZ(0.02),
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.all(20.0),
               child: Image.asset('images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
@@ -68,15 +70,14 @@ class _BodyState extends State<Body> {
           ),
           InkWell(
             child: Container(
-              width: 300,
-              height: 300,
+              padding: EdgeInsets.all(15.0),
+              margin: EdgeInsets.all(20.0),
+              width: 160,
+              height: 180,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              transform: Matrix4.rotationZ(0.02),
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.all(20.0),
               child: Image.asset('images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
@@ -85,15 +86,14 @@ class _BodyState extends State<Body> {
           ),
           InkWell(
             child: Container(
-              width: 300,
-              height: 300,
+              padding: EdgeInsets.all(15.0),
+              margin: EdgeInsets.all(20.0),
+              width: 160,
+              height: 180,
               decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              transform: Matrix4.rotationZ(0.02),
-              padding: EdgeInsets.all(20.0),
-              margin: EdgeInsets.all(20.0),
               child: Image.asset('images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
