@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'appBar.dart';
 import 'body.dart';
 import 'drawer.dart';
+import 'collection.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,9 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Shopping app',
       home: Scaffold(
         appBar: BaseAppBar(),
-        drawer: NDrawer() ,
-        //appBar: BaseAppBar(),
-        body:  ListView(children:[Body()]),
+        drawer: NDrawer(),
+        body: ListView(children: [Body()]),
       ),
     );
   }

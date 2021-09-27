@@ -15,10 +15,32 @@ class _CollectionState extends State<Collection> {
         children: [
           Container(
             child: Card(
+                child: InkWell(
+              child: Column(
+                children: <Widget>[
+                  const ListTile(
+                      title: Text(
+                        'Item 1',
+                        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                      ),
+                      subtitle: Text(
+                      'Description of item'
+                      ),
+                        leading: CircleAvatar(
+                          backgroundImage:AssetImage('images/women.png'),
+
+                      )
+                  ),
+                ],
+              ),
+            )),
+          ),
+          Container(
+            child: Card(
               child: InkWell(
                 splashColor: Colors.blue.withAlpha(30),
                 onTap: () {
-                  print('Card tapped.');
+                  print('Card tapped1.');
                 },
                 child: const SizedBox(
                   width: 200,
@@ -29,20 +51,6 @@ class _CollectionState extends State<Collection> {
             ),
           ),
           Container(
-            child: Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: const SizedBox(
-                  width: 200,
-                  height: 100,
-                  child: Text('A card that can be tapped'),
-                ),
-              ),
-            ),
-          ),Container(
             child: Card(
               child: InkWell(
                 splashColor: Colors.blue.withAlpha(30),
