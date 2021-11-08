@@ -27,7 +27,8 @@ class _BodyState extends State<Body> {
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              child: Image.asset('images/fashion.png', fit: BoxFit.cover),
+              child:
+                  Image.asset('assets/images/fashion.png', fit: BoxFit.cover),
             ),
             onTap: () {
               print("Tapped on Men collection");
@@ -43,7 +44,7 @@ class _BodyState extends State<Body> {
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              child: Image.asset('images/women.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/women.png', fit: BoxFit.cover),
             ),
             onTap: () {
               Navigator.push(
@@ -62,7 +63,7 @@ class _BodyState extends State<Body> {
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              child: Image.asset('images/kids.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
               print("Tapped on container3");
@@ -78,7 +79,7 @@ class _BodyState extends State<Body> {
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              child: Image.asset('images/kids.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
               print("Tapped on container4");
@@ -94,7 +95,7 @@ class _BodyState extends State<Body> {
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.deepOrange[900],
               ),
-              child: Image.asset('images/kids.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/kids.png', fit: BoxFit.cover),
             ),
             onTap: () {
               print("Tapped on container5");

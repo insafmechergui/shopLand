@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class Collection extends StatefulWidget {
   const Collection({Key? key}) : super(key: key);
@@ -9,62 +10,76 @@ class Collection extends StatefulWidget {
 
 class _CollectionState extends State<Collection> {
   @override
+
   Widget build(BuildContext context) {
     return ListView(children: [
       Wrap(
         children: [
-          Container(
-            child: Card(
-                child: InkWell(
-              child: Column(
-                children: <Widget>[
-                  const ListTile(
-                      title: Text(
-                        'Item 1',
-                        style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                      'Description of item'
-                      ),
-                        leading: CircleAvatar(
-                          backgroundImage:AssetImage('images/women.png'),
+          GFCard(
+            boxFit: BoxFit.cover,
+            image: Image.asset('assets/images/fashion.png'),
+            title: GFListTile(
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('assets/images/women.png'),
+              ),
+              title: Text('Item1'),
+              subTitle: Text('taille 3 4'),
+            ),
+            content: Text('some text example for description'),
+            buttonBar: GFButtonBar(
+              children: [
+                GFButton(
+                  onPressed: () {
+                    print('Bought');
+                  },
+                  text: 'buy',
+                ),
+                GFButton(
+                  onPressed: () {
+                    print('Canceled');
 
-                      )
-                  ),
-                ],
-              ),
-            )),
-          ),
-          Container(
-            child: Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped1.');
-                },
-                child: const SizedBox(
-                  width: 200,
-                  height: 100,
-                  child: Text('A card that can be tapped'),
+                  },
+                  text: 'Cancel',
                 ),
-              ),
+              ],
             ),
           ),
-          Container(
-            child: Card(
-              child: InkWell(
-                splashColor: Colors.blue.withAlpha(30),
-                onTap: () {
-                  print('Card tapped.');
-                },
-                child: const SizedBox(
-                  width: 200,
-                  height: 100,
-                  child: Text('A card that can be tapped'),
-                ),
+          GFCard(
+            title: GFListTile(
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('assets/images/women.png'),
               ),
+              title: Text('Item1'),
+              subTitle: Text('taille 3 4'),
+            ),
+            content: Text('some text example for description'),
+            buttonBar: GFButtonBar(
+              children: [
+                GFButton(
+                  onPressed: () {},
+                  text: 'buy',
+                )
+              ],
             ),
           ),
+          GFCard(
+            title: GFListTile(
+              avatar: GFAvatar(
+                backgroundImage: AssetImage('assets/images/women.png'),
+              ),
+              title: Text('Item1'),
+              subTitle: Text('taille 3 4'),
+            ),
+            content: Text('some text example for description'),
+            buttonBar: GFButtonBar(
+              children: [
+                GFButton(
+                  onPressed: () {},
+                  text: 'buy',
+                )
+              ],
+            ),
+          )
         ],
       )
     ]);
