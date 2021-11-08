@@ -138,7 +138,9 @@ class _CollectionState extends State<Collection> {
     AlertDialog alert = AlertDialog(
 
       content: Text("Item added to the cart."),
-
+      actions: [
+        okButton,
+      ],
     );
 
     // show the dialog
