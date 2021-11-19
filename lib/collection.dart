@@ -41,7 +41,16 @@ class _CollectionState extends State<Collection> {
                   children: [
                     GFButton(
                       onPressed: () {
-                        print('Added to the cart');
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              Future.delayed(Duration(seconds: 1), () {
+                                Navigator.of(context).pop(true);
+                              });
+                              return AlertDialog(
+                                title: Text('Item added to the cart'),
+                              );
+                            });
                       },
                       color: Colors.greenAccent,
                       text: 'buy',
@@ -59,24 +68,44 @@ class _CollectionState extends State<Collection> {
               GFCard(
                 title: GFListTile(
                   avatar: GFAvatar(
-                    backgroundImage: AssetImage('assets/images/women.png'),
+                    backgroundImage: AssetImage('assets/images/kids.png'),
                   ),
-                  title: Text('Item1'),
-                  subTitle: Text('taille 3 4'),
+                  title: Text('Item2'),
+                  subTitle: Text('kids'),
                 ),
-                content: Text('some text example for description'),
+                content: Text('some text example for description:'
+                    ' Lorem Ipsum is simply dummy text of the printing '
+                    'and typesetting industry. Lorem Ipsum has been the '
+                    'industry\'s standard dummy text ever since the 1500s,'
+                    ' when an unknown printer took a galley of type and '
+                    'scrambled it to make a type specimen book. '
+                    'It has survived not only five centuries,'
+                    ' but also the leap into electronic typesetting, '
+                    'remaining essentially unchanged. '
+                    'including versions of Lorem Ipsum'),
                 buttonBar: GFButtonBar(
                   children: [
                     GFButton(
                       onPressed: () {
-                        print('Bought');
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              Future.delayed(Duration(seconds: 1), () {
+                                Navigator.of(context).pop(true);
+                              });
+                              return AlertDialog(
+                                title: Text('Item added to the cart'),
+                              );
+                            });
                       },
+                      color: Colors.greenAccent,
                       text: 'buy',
                     ),
                     GFButton(
                       onPressed: () {
                         print('Canceled');
                       },
+                      color: Colors.redAccent,
                       text: 'Cancel',
                     ),
                   ],
@@ -85,70 +114,53 @@ class _CollectionState extends State<Collection> {
               GFCard(
                 title: GFListTile(
                   avatar: GFAvatar(
-                    backgroundImage: AssetImage('assets/images/women.png'),
+                    backgroundImage: AssetImage('assets/images/fashion.png'),
                   ),
-                  title: Text('Item1'),
-                  subTitle: Text('taille 3 4'),
+                  title: Text('Item3'),
+                  subTitle: Text('men'),
                 ),
-                content: Text('some text example for description'),
-                buttonBar: GFButtonBar(
-                  children: [
-                    GFButton(
-                      onPressed: () {},
-                      text: 'buy',
-                    )
-                  ],
-                ),
-              ),
-              GFCard(
-                title: GFListTile(
-                  avatar: GFAvatar(
-                    backgroundImage: AssetImage('assets/images/women.png'),
-                  ),
-                  title: Text('Item1'),
-                  subTitle: Text('taille 3 4'),
-                ),
-                content: Text('some text example for description'),
+                content: Text('some text example for description:'
+                    ' Lorem Ipsum is simply dummy text of the printing '
+                    'and typesetting industry. Lorem Ipsum has been the '
+                    'industry\'s standard dummy text ever since the 1500s,'
+                    ' when an unknown printer took a galley of type and '
+                    'scrambled it to make a type specimen book. '
+                    'It has survived not only five centuries,'
+                    ' but also the leap into electronic typesetting, '
+                    'remaining essentially unchanged. '
+                    'including versions of Lorem Ipsum'),
                 buttonBar: GFButtonBar(
                   children: [
                     GFButton(
                       onPressed: () {
-                        showAlertDialog(context);
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              Future.delayed(Duration(seconds: 1), () {
+                                Navigator.of(context).pop(true);
+                              });
+                              return AlertDialog(
+                                title: Text('Item added to the cart'),
+                              );
+                            });
                       },
+                      color: Colors.greenAccent,
                       text: 'buy',
-                    )
+                    ),
+                    GFButton(
+                      onPressed: () {
+                        print('Canceled');
+                      },
+                      color: Colors.redAccent,
+                      text: 'Cancel',
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           )
         ]));
   }
 
-  showAlertDialog(BuildContext context) {
-    // Create button
-    Widget okButton = FlatButton(
-      child: Text("OK"),
-      onPressed: () {
-        Navigator.of(context).pop();
-      },
-    );
 
-    // Create AlertDialog
-    AlertDialog alert = AlertDialog(
-
-      content: Text("Item added to the cart."),
-      actions: [
-        okButton,
-      ],
-    );
-
-    // show the dialog
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
-  }
 }
